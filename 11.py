@@ -1,71 +1,39 @@
-
-class Electriccar:
-    Numberofwheels = "Number of wheels 4"
-    Batterycapacity = "Battery capacity 75"
-    Numberofseats = "Number of seats 4"
-    Seatsize = "Seat size 47"
-    Numberofheadlights = "Number of head lights 4"
-    Wheelsize = "Wheel size 25"
-    Lobovoesteklo = "The car has a windshield"
-
-class Electricmotorcycle(Electriccar):
-    Numberofwheels = "Number of wheelss 3"
-    Batterycapacity = "Barrery capacity 50"
-    Numberofseats = "Number of seats 2"
-    Seatsize = "Seatsize 32"
-    Numberofheadlights = "Number of headlights 2"
-    Wheelsize = "Wheelsize 17"
-    Steklo = "The electric motorcycle has a windshield"
-
-class Electroscooter(Electricmotorcycle):
-    Numberofwheels = "Number of wheels 2"
-    Batterycapacity = "Battery capacity 37"
-    Wheelsize = "Wheelsize 13"
-
-
-
-    def __init__(self):
-        print(self.Numberofseats)
-        print(self.Batterycapacity)
-        print(self.Seatsize)
-        print(self.Wheelsize)
-        print(self.Numberofwheels)
-        print(self.Numberofheadlights)
-        print(self.Lobovoesteklo)
-        print(self.Steklo)
-factory = Electroscooter()
-
-# class Hello_world:
-#     hello = "Hello"
-#     _hello = "_Hello"
-#     __hello = "__Hello"
-#
-#
+# import random
+# class F:
 #     def __init__(self):
-#         self.world = "World"
-#         self._world = "_World"
-#         self.__world = "__World"
+#         self.__a = 100
+#         self.__b = 300
+#         self.sum = None
+#     def __method(self):
+#         c = random.randint(1,2)
+#         if c == 1:
+#             self.sum = self.__a * self.__b
+#         elif c == 2:
+#             self.sum = self.__b + self.__a
 #
 #     def printer(self):
-#         print(self.hello)
-#         print(self._hello)
-#         print(self.__hello)
-#         print(self.world)
-#         print(self._world)
-#         print(self.__world)
+#         print(self.__method())
+#         return self.__method()
 #
-# class Hi(Hello_world):
-#     def hi_printer(self):
-#         print(self.hello)
-#         print(self._hello)
-#         # print(self.__hello)
-#         print(self.world)
-#         print(self._world)
-#         # print(self.__world)
-#
-# hello = Hello_world()
-# hello.printer()
-# hi = Hi()
-# hi.hi_printer()
+# gg = F()
+# gg.printer()
 
+from random import randint
+class F():
+    def __init__(self, a, b):
+        self.__a = a
+        self.__b = b
+
+    def __in_method(self):
+        self.operacion = randint(1, 2)
+        if self.operacion == 1:
+            return self.__a + self.__b
+        else:
+            return self.__a - self.__b
+
+    def printer(self):
+        print(self.__in_method())
+
+ob = F(10,15)
+ob.printer()
 
