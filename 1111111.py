@@ -33,9 +33,6 @@ class Human:
             self.money -= 15
 
 
-    def to_repair(self):
-        self.car.strength += 100
-        self.money -= 50
     def days_indexes(self, day):
         day = f"Today the {day} of {self.name}'s life"
         print(f"{day:=^50}", '\n')
@@ -126,27 +123,6 @@ class House:
     def __init__(self):
         self.mess = 0
         self.food = 0
-
-class Game:
-    def __init__(self, game_list):
-        self.game = random.choice(list(game_list))
-        self.game.gladness = game_list[self.game]['Gladness']
-
-
-
-game_list = {
-    "Rust": {"Gladness": 5},
-    "Dota 2 ": {"Gladness": 4},
-    "Roblox": {"Gladness": 2},
-    "Samp": {"Gladness":0}}
-
-
-
-brands_of_car = {
-    "BMW":{"fuel":100, "strength":100, "consumption": 6},
-    "Lada":{"fuel":50, "strength":40, "consumption": 10},
-    "Volvo":{"fuel":70, "strength":150, "consumption": 8},
-    "Ferrari":{"fuel":80, "strength":120, "consumption": 14}}
 
 
 simson = Human(name = "simson")
