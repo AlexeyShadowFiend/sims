@@ -1,13 +1,16 @@
 result = []
 def divider(a, b):
  if a < b:
-    raise ValueError
+     raise ValueError
  if b > 100:
-    raise IndexError
+     raise IndexError
  return a/b
-data = {10: 2, 2: 5, "123": 4, 18: 0, [123]: 15, 8 : 4}
+data = {10: 2, 2: 5, "123": 4, 18: 0, 15: 15, 8 : 4}
 for key in data:
- res = divider(key, data[kem])
- result.append(res)
+    try:
+        res = divider(key, data[key])
+        result.append(res)
+    except Exception as error:
+        print(type(error))
 
 print(result)
